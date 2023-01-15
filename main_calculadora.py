@@ -76,3 +76,24 @@ def getOperation():
 		print("\n\t\t -------Ingrese una opción válida para la calculadora-------")
 		operation = printMenu()
 	return operation
+
+def main():
+	operation = getOperation()
+	if (operation == 10):
+			print("Saliendo de la calcualdora")
+			print("\n\t\t\t******  Gracias por usar la calculadora  ******")
+			print("--------------------------------------------------------------------------------------------")
+	else:
+		after = calculate(operation)
+		while 1:
+			print("--------------------------------------------------------------------------------------------")
+			if(after == 3):
+				print("\n\t\t\t******  Gracias por usar la calculadora  ******")
+				print("--------------------------------------------------------------------------------------------")
+				break
+			elif(after == 2):
+				after = calculate(operation)
+			else:
+				operation = getOperation()
+				after = calculate(operation)
+main()
