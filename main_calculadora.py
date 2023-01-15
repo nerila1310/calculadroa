@@ -43,3 +43,36 @@ def printMenu():
           "\n\t 10 Exit\n")
     return int(input('\t\t Que opcion deseas realizar: '))
 
+def afterOperation():
+    print("\n\t\t -------Elige una opcion del menu------- \n"
+		  "\n\t 1) Regresar al menú"
+          "\n\t 2) Volver a realizar la operación"
+          "\n\t 3) Salir de calculadora\n")
+    return int(input('\t\t Que opcion deseas: '))
+
+def calculate(operation):
+	if (operation == 10):
+			return 3
+	elif (operation > 0 and operation <= 4):
+		num1 = int(input("\n\t Ingrese el primer valor: "))
+		num2 = int(input("\t Ingrese el segundo valor: "))
+		simpleOperations(num1, num2, operation)
+	elif (operation == 5):
+		while 1:
+			num1 = int(input("\n\t Ingrese el un valor: "))
+			if (num1 >= 0):
+				break
+		print("\t\tEl resultado de la raiz es: ", np.sqrt(num1))
+	elif (operation > 5 and operation <= 9):
+		num = int(input("\n\t Ingrese un numero: "))
+		trigonometryOperations(num, operation)
+	
+	after = afterOperation()	
+	return after
+	
+def getOperation():
+	operation = printMenu()
+	while (operation <= 0 or operation > 10):
+		print("\n\t\t -------Ingrese una opción válida para la calculadora-------")
+		operation = printMenu()
+	return operation
