@@ -29,3 +29,17 @@ def trigonometryOperations(num, operation):
 		print("\t\tEl resultado de la operacion tangente es: ", math.tan(num))
 		return
 
+def printMenu():
+    print("\n\t\t -------Ingresa una opcion de la calculadora a ocupar------- \n"
+		  "\n\t 1) Sumar"
+          "\n\t 2) Restar"
+          "\n\t 3) Multiplicar"
+          "\n\t 4) Dividir"
+          "\n\t 5) Raiz n"
+          "\n\t 6) Exponente n"
+          "\n\t 7) Seno"
+          "\n\t 8) Coseno"
+          "\n\t 9) Tangente"
+          "\n\t 10 Exit\n")
+    return int(input('\t\t Que opcion deseas realizar: '))
+
